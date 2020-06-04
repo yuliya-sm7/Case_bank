@@ -12,7 +12,7 @@ import Container from 'react-bootstrap/Container';
 
 const App = () => (
   <Container className="p-3">
-    <Jumbotron className='p-5'>
+    <Jumbotron className='p-4'>
       <h2 className="header">Банк кейсов "Промробо"</h1>
       <Sheet></Sheet>
     </Jumbotron>
@@ -36,11 +36,15 @@ const Navbar = () => (
 );
 
 const Footer = () => (
-  <footer className="page-footer fixed-bottom bg-dark text-light">
-    <div className="footer-copyright text-center py-1">Москва 2020
+  <div><iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfu8dLlynZB3LhC1I_8MVslXVzltJGihHN7sK3xSiE7OLT4JQ/viewform?embedded=true"
+    width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+    <footer className="page-footer fixed-bottom bg-dark text-light">
+      <div className="footer-copyright text-center py-1">Москва 2020
             <a href="https://www.roskvantorium.ru/" className="text-light stretched-link"> ФГАУ "ФНФРО"</a>
-    </div>
-  </footer>
+      </div>
+    </footer>
+  </div>
 );
 
 ReactDOM.render(<Navbar />, document.getElementById('navbar'));
