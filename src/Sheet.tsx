@@ -10,12 +10,12 @@ const ExampleToast: React.FunctionComponent = ({ obj }) => {
 
     return (
         <>
-            {!show && <Button onClick={() => toggleShow(true)}>{obj.Region}</Button>}
+            {!show && <Button onClick={() => toggleShow(true)}>{obj['Регион']}</Button>}
             <Toast show={show} onClose={() => toggleShow(false)}>
                 <Toast.Header>
-                    <strong className="mr-auto">{obj.Case_name}</strong>
+                    <strong className="mr-auto">{obj['Название кейса']}</strong>
                 </Toast.Header>
-                <Toast.Body></Toast.Body>
+                <Toast.Body>{obj['Текст']}</Toast.Body>
             </Toast>
         </>
     );
@@ -48,7 +48,7 @@ class Sheet extends Component {
                     {
                         data.map(obj => {
                             return (
-                                <div className='m-3' key={obj.Time_cod}>
+                                <div className='m-3' key={obj['Отметка времени']}>
                                     <ExampleToast obj={obj}></ExampleToast>
                                 </div>
                             )
